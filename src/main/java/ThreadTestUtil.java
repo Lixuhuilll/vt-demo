@@ -25,6 +25,8 @@ public class ThreadTestUtil {
         for (var thread : threads) {
             thread.start();
         }
+        log.info("启动用时：{} ms", System.currentTimeMillis() - start);
+
         // 等待执行完成
         try {
             for (var thread : threads) {
